@@ -3,6 +3,7 @@ require_relative 'config/environment'
 class App < Sinatra::Base
 
   get '/' do 
+    @new = Puppy.new(params[:name], params[:breed], params[:age])
     erb :index
   end 
   
@@ -11,7 +12,7 @@ class App < Sinatra::Base
   end 
   
   post '/puppy' do
-    Puppy.new(params)
-    erb :display_puppy
+    Puppy.new(name,breed,age)
+    #erb :display_puppy
   end 
 end
