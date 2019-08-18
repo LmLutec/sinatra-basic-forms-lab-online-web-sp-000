@@ -3,7 +3,7 @@ require_relative 'config/environment'
 class App < Sinatra::Base
 
   get '/' do 
-    @new = params[:name], params[:breed], params[:age]
+    @user_input = params[:name], params[:breed], params[:age]
     erb :index
   end 
   
