@@ -3,7 +3,7 @@ require_relative 'config/environment'
 class App < Sinatra::Base
 
   get '/' do 
-    @new = Puppy.new(params[:name], params[:breed], params[:age])
+    @new = params[:name], params[:breed], params[:age]
     erb :index
   end 
   
